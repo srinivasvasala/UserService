@@ -1,2 +1,4 @@
-package com.srinivas.userservice.services;public interface UserService {
+package com.srinivas.userservice.services;
+
+public interface UserService {
 }

@@ -1,2 +1,4 @@
-package com.srinivas.userservice.controllers;public class RoleController {
+package com.srinivas.userservice.controllers;
+
+public class RoleController {
 }
