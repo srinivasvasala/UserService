@@ -1,4 +1,4 @@
-package com.srinivas.userservice.models;
+package com.srinivas.userservice.Models;
 
 import jakarta.persistence.*;
 import lombok.Getter;

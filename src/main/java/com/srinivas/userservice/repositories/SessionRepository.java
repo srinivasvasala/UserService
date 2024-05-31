@@ -1,6 +1,6 @@
 package com.srinivas.userservice.repositories;
 
-import com.srinivas.userservice.models.Session;
+import com.srinivas.userservice.Models.Session;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

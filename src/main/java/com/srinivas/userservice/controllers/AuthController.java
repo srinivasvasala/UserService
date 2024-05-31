@@ -1,7 +1,7 @@
 package com.srinivas.userservice.controllers;
 
 import com.srinivas.userservice.dtos.*;
-import com.srinivas.userservice.models.SessionStatus;
+import com.srinivas.userservice.Models.SessionStatus;
 import com.srinivas.userservice.services.Impl.AuthServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package com.srinivas.userservice.dtos;
 
-import com.srinivas.userservice.models.Role;
-import com.srinivas.userservice.models.User;
+import com.srinivas.userservice.Models.Role;
+import com.srinivas.userservice.Models.User;
 import lombok.Getter;
 import lombok.Setter;
 

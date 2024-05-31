@@ -1,4 +1,4 @@
-package com.srinivas.userservice.models;
+package com.srinivas.userservice.Models;
 
 public enum SessionStatus {
     ENDED,

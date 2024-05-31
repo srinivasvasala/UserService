@@ -1,10 +1,10 @@
 package com.srinivas.userservice.services.Impl;
 
+import com.srinivas.userservice.Models.Role;
+import com.srinivas.userservice.Models.Session;
+import com.srinivas.userservice.Models.SessionStatus;
+import com.srinivas.userservice.Models.User;
 import com.srinivas.userservice.dtos.UserDto;
-import com.srinivas.userservice.models.Role;
-import com.srinivas.userservice.models.Session;
-import com.srinivas.userservice.models.SessionStatus;
-import com.srinivas.userservice.models.User;
 import com.srinivas.userservice.repositories.SessionRepository;
 import com.srinivas.userservice.repositories.UserRepository;
 import com.srinivas.userservice.services.AuthService;
@@ -12,14 +12,12 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.MacAlgorithm;
-import org.hibernate.type.descriptor.DateTimeUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.util.MultiValueMapAdapter;
 
 import javax.crypto.SecretKey;

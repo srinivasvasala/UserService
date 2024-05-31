@@ -1,7 +1,7 @@
 package com.srinivas.userservice.services;
 
 import com.srinivas.userservice.dtos.UserDto;
-import com.srinivas.userservice.models.SessionStatus;
+import com.srinivas.userservice.Models.SessionStatus;
 import org.springframework.http.ResponseEntity;
 
 public interface AuthService {
