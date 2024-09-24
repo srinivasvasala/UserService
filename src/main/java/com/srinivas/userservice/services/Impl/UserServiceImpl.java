@@ -6,13 +6,16 @@ import com.srinivas.userservice.repositories.RoleRepository;
 import com.srinivas.userservice.repositories.UserRepository;
 import com.srinivas.userservice.Models.User;
 import com.srinivas.userservice.services.UserService;
+import jakarta.persistence.Table;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
