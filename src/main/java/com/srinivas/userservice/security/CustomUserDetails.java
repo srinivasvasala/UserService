@@ -1,5 +1,6 @@
 package com.srinivas.userservice.security;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.srinivas.userservice.Models.Role;
 import com.srinivas.userservice.Models.User;

@@ -10,7 +10,7 @@ import java.util.Optional;
 
     @Service
     public class CustomSpringUserDetailsService implements UserDetailsService  {
-        private UserRepository userRepository;
+        private final UserRepository userRepository;
 
         public CustomSpringUserDetailsService(UserRepository userRepository) {
             this.userRepository = userRepository;

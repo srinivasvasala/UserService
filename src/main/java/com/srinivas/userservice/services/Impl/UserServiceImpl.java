@@ -31,10 +31,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserDetails(Long userId) {
       Optional<User> optionalUser = userRepository.findById(userId);
-      if(optionalUser.isEmpty()){
-          return null;
-      }
-        return UserDto.from(optionalUser.get());
+        return optionalUser.map(UserDto::from).orElse(null);
     }
 
     @Override

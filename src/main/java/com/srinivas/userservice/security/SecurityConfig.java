@@ -105,7 +105,7 @@ public class SecurityConfig {
 //
 //        return new InMemoryRegisteredClientRepository(oidcClient);
 //    }
-
+//
 
 
     @Bean

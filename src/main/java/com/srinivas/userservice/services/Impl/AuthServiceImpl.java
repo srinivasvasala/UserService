@@ -12,6 +12,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.MacAlgorithm;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -24,12 +25,13 @@ import javax.crypto.SecretKey;
 import java.util.*;
 
 @Service
+@Slf4j
 public class AuthServiceImpl implements AuthService {
 
-    private SessionRepository sessionRepository;
-    private UserRepository userRepository;
+    private final SessionRepository sessionRepository;
+    private final UserRepository userRepository;
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public AuthServiceImpl(SessionRepository sessionRepository, UserRepository userRepository,BCryptPasswordEncoder bCryptPasswordEncoder){
         this.userRepository = userRepository;
@@ -40,10 +42,12 @@ public class AuthServiceImpl implements AuthService {
     public ResponseEntity<UserDto> login(String email, String password) {
         Optional<User> optionalUser = userRepository.findByEmail(email);
         if(optionalUser.isEmpty()){
-            return null;
+            log.info("User not found");
+            throw new RuntimeException("User not found");
         }
         User user = optionalUser.get();
         if(!bCryptPasswordEncoder.matches(password, user.getPassword())){
+            log.info("Wrong password entered");
              throw new RuntimeException("Wrong password entered");
         }
         //json -> key:value
